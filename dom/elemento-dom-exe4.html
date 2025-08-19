@@ -1,0 +1,36 @@
+<!--Com base no HTML a seguir coloque todos os elementos que tem a
+class estilo com fundo azul, letra branca e todas as letras em maiúscula.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementos do DOM - Exercício Prático</title>
+</head>
+
+<body>
+  <div class="estilo">
+    DIV com estilo.
+  </div>
+  <div class="estilo">
+    DIV com estilo.
+  </div>
+  <p class="estilo">
+    Parágrafo com estilo.
+  </p>
+  <p>Isso é um <span class="estilo">elemento span</span> com class "Estilo".</p>
+</body>
+<script>
+  let className = document.getElementsByClassName("estilo");
+
+  for (i = 0; i < className.length; i++) {
+    className[i].style.background = "#1006ab";
+    className[i].style.color = "white";
+    className[i].innerText = className[i].innerText.toUpperCase();
+    //className[i].style.textTransform = "Uppercase";
+  }
+</script>
+
+</html>
